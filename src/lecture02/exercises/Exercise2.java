@@ -2,7 +2,7 @@ package lecture02.exercises;
 
 
 public class Exercise2 {
-    // Print the perimeter of a triangle by given sides. Use formula to calculate it. 
+    // Print the perimeter of a triangle by given sides. Use formula to calculate it.
     public static void main(String[] args) {
         int a = 7;
         int b = 4;

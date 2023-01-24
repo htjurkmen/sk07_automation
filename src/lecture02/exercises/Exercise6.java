@@ -17,7 +17,7 @@ public class Exercise6 {
 
         System.out.println("Discriminant = " + discriminant);
 
-        //discriminant > 0
+        //discriminant >= 0
         root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
         root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
         System.out.println("\nDiscriminant > 0");

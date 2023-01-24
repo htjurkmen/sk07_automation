@@ -1,4 +1,4 @@
-package lecture02;
+package lecture02.examples;
 
 public class DataTypes {
     public static void main(String[] args) {
