@@ -1,15 +1,23 @@
 package lecture06.examples;
 
-public class Person {
-    public static int age;
-    public static String name;
+class Person {
+    public int age;
+    public String name;
 
-    public static int getAge() {
-        return age;
+    public int getAge() {
+        return this.age;
     }
-    public static void setAge(int age) {
+    public void setAge(int age) {
         if (age >= 0) {
             age = age;
         }
+    }
+}
+
+class Test {
+    public static void main(String[] args) {
+        Person person = new Person();
+        person.age = 5;
+        System.out.println(person.getAge());
     }
 }

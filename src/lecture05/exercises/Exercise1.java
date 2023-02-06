@@ -1,0 +1,14 @@
+package lecture05.exercises;
+
+public class Exercise1 {
+    // Write program to print sum of a given array elements
+    public static void main(String[] args) {
+        int[] arr = {0, 1, 2, 5, 66, 200};
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        System.out.println("The sum of the array elements is " + sum);
+    }
+}
