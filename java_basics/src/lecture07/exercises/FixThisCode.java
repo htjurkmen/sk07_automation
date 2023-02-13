@@ -29,13 +29,13 @@ public class FixThisCode {
             fileWriter = getFileWriter(filePath);
             printToFile(fileWriter, textToAdd, howManyTimesToPrintTheTextToFile);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Unable to print text to file. ", e);
         }  finally {
             if (fileWriter != null) {
                 try {
                     fileWriter.close();
                 } catch (IOException e) {
-                    throw new RuntimeException(e);
+                    System.out.printf("Unable to close the file");
                 }
             }
         }

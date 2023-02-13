@@ -14,7 +14,8 @@ public class Main {
         System.out.println(s3);
         System.out.println(s2.getPerimeter(3.0));
 
-//        Square s4 = new Shape();
+        // Why is this invalid?
+        // Square s4 = new Shape();
 
         Square s5 = new Square();
         System.out.println(s5.getArea(6.0));
