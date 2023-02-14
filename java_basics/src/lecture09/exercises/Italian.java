@@ -3,7 +3,7 @@ package lecture09.exercises;
 import java.util.List;
 
 public class Italian extends Person {
-    public Italian(String name, String sex, String religion, String job, long egn) {
+    public Italian(String name, String sex, String religion, String job, String egn) {
         super(name, sex, religion, "Italian", job, "Italian", "Italy", egn);
     }
 

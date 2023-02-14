@@ -1,7 +1,7 @@
 package lecture09.exercises;
 
 public class Child extends Person {
-    public Child(String name, String sex, String religion, String language, String nationality, String country, long egn) {
+    public Child(String name, String sex, String religion, String language, String nationality, String country, String egn) {
         super(name, sex, religion, language, null, nationality, country, egn);
     }
 

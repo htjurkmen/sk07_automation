@@ -1,7 +1,7 @@
 package lecture09.exercises;
 
 public class Bulgarian extends Person {
-    public Bulgarian(String name, String sex, String religion, String job, long egn) {
+    public Bulgarian(String name, String sex, String religion, String job, String egn) {
         super(name, sex, religion, "Bulgarian", job, "Bulgarian", "Bulgaria", egn);
     }
     @Override

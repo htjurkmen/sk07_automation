@@ -1,7 +1,7 @@
 package lecture09.exercises;
 
 public class American extends Person {
-    public American(String name, String sex, String religion, String job, long id) {
+    public American(String name, String sex, String religion, String job, String id) {
         super(name, sex, religion, "English", job, "American", "USA", id);
     }
 

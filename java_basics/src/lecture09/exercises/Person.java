@@ -29,9 +29,9 @@ public class Person {
     private final String dateOfBirth;
     private String country;
     private final int age;
-    private final long EGN;
+    private final String EGN;
 
-    public Person(String name, String sex, String religion, String language, String job, String nationality, String country, long egn) {
+    public Person(String name, String sex, String religion, String language, String job, String nationality, String country, String egn) {
         validateSex(sex);
         validateEGN(egn);
         this.name = name;
@@ -95,23 +95,37 @@ public class Person {
         return sb.toString();
     }
 
-    private int calculateAge(long EGN) {
-        String firstTwoDigits = Long.toString(EGN).substring(0, 2);
-        String birthYear = "19" + firstTwoDigits;
+    private int calculateAge(String EGN) {
+        String birthYear;
+        String yearDigits = EGN.substring(0, 2);
+        String monthDigits = EGN.substring(2, 4);
+        int monthNumber = Integer.parseInt(monthDigits);
+        if (monthNumber > 40) {
+            birthYear = "20" + yearDigits;
+        } else if (monthNumber > 20) {
+            birthYear = "18" + yearDigits;
+        } else {
+            birthYear = "19" + yearDigits;
+        }
         int currentYear = LocalDate.now().getYear();
         return currentYear - Integer.parseInt(birthYear);
     }
 
-    private String getDateOfBirth(long EGN) {
-        String month = Long.toString(EGN).substring(2, 4);
-        String day = Long.toString(EGN).substring(4, 6);
-        return month + "-" + day;
+    private String getDateOfBirth(String EGN) {
+        String dayDigits = EGN.substring(4, 6);
+        String monthDigits = EGN.substring(2, 4);
+        int monthNumber = Integer.parseInt(monthDigits);
+        if (monthNumber > 40) {
+            monthNumber -= 40;
+        } else if (monthNumber > 20) {
+            monthNumber -= 20;
+        }
+        return monthNumber + "-" + dayDigits;
     }
 
-    private void validateEGN(long EGN) {
-        String egnString = Long.toString(EGN);
-        int egnLenght = egnString.length();
-        if (egnLenght != 10) {
+    private void validateEGN(String EGN) {
+        int egnLenght = EGN.length();
+        if (egnLenght != 10 || !EGN.matches("[0-9]+")) {
             throw new RuntimeException("The EGN must be 10 digits!");
         }
     }
