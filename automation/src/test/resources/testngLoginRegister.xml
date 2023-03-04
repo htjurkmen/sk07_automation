@@ -1,0 +1,10 @@
+<suite name="regressionSuite" verbose="1">
+    <test name="NewUserRegisterLogin" preserve-order="true">
+        <parameter name="username" value="harryPotter"/>
+        <parameter name="password" value="mypassword"/>
+        <parameter name="email" value="harryPotter@abv.bg"/>
+        <classes>
+            <class name="lecture14.exercises.regressionSuite.NewUserTest"></class>
+        </classes>
+    </test>
+</suite>
