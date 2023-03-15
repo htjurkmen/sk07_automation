@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="lecture17" verbose="1">
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter"></listener>
+    </listeners>
+    <test name="DownloadTest">
+        <classes>
+            <class name="lecture17.examples.tests.DownloadTest"></class>
+        </classes>
+    </test>
+</suite>
